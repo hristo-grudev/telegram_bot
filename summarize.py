@@ -43,7 +43,6 @@ async def generate_summary(update: Update, context: ContextTypes.DEFAULT_TYPE):
             {"role": "user",
              "content": f"Обобщи следната дискусия в кратко резюме:\n\n{messages_text}"}
         ],
-        max_tokens=128000,
         temperature=0.5
     )
 
