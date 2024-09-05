@@ -43,7 +43,8 @@ async def generate_summary(update: Update, context: ContextTypes.DEFAULT_TYPE):
             {"role": "user",
              "content": f"Обобщи следната дискусия в кратко резюме:\n\n{messages_text}"}
         ],
-        temperature=0.5
+        temperature=0.5,
+        max_tokens=256
     )
 
     summary = response.choices[0].message.content.strip()
